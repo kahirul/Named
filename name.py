@@ -1,5 +1,8 @@
 import string
 from nltk.util import ngrams
+from sys import argv
+
+test_name = argv[1]
 
 raw = open('names.pair', 'r').read().split('\n')
 raw = filter(string.strip, raw)
@@ -28,8 +31,6 @@ for pair in names:
 t_bi = bi
 m_total = 0
 f_total = 0
-
-test_name = 'yudi rahono'
 
 t_names = map(string.strip, test_name.split(' '))
 for t_name in t_names:
